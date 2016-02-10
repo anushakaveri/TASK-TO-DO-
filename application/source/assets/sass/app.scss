@@ -1,0 +1,196 @@
+$min-xs-width: 480px;
+$primary-color: #1E1F22;
+$header-color: #313236;
+$white:#fff;
+$grey-color:#cfcfcf;
+$heading-color:#65adf7;
+$text-color:#d3d4d4;
+$overflow:hidden;
+@font-face {
+    font-family: 'sanfranc';
+    font-stretch: normal;
+    // since all the browsers currently supports woff are going to use only woff.
+    // add eot reference if you're supporting IE8
+    src: url( "../fonts/sanfranciscodisplay-regular-webfont.woff" ) format('woff'),
+         url( "../fonts/sanfranciscodisplay-regular-webfont.ttf" ) format('ttf'),
+         url( "../fonts/sanfranciscodisplay-regular-webfont.svg" ) format('svg');
+}
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+  background:$primary-color;
+}
+
+.wrap{
+	width:980px;
+	margin:0 auto
+}
+
+header{
+	padding:10px 0;
+	background:$header-color;
+}
+nav{
+	.collapse{
+		display:none
+	}
+	ul{
+		list-style-type:none;
+		overflow:$overflow;
+		width:600px;
+		margin:0 auto
+	}
+	li{
+		float:left;
+	}
+	a{
+		color:$white;
+		text-decoration:none;
+		display:inline-block;
+		padding:5px;
+		font-size:24px;
+		font-family:sanfranc;
+	}
+}
+section{
+	overflow:$overflow;
+	font-family:sanfranc;
+	margin-top:80px
+}
+section{
+	.left{
+		width:70%;
+		overflow:hidden
+	}
+	.left{
+		.block{
+			width:45%;
+			float:left;
+			margin:10px
+		}
+		.block{
+			p{
+				color:$text-color
+			}
+		}
+		h3{
+			color:$heading-color;
+			font-size:20px;
+			margin-bottom:20px
+		}
+		.im{
+			width:100%;
+			height:150px;
+			background:$grey-color
+		}
+		.im img{
+			width:100%;
+			height:100%;
+			box-shadow:0 0 20px 0;
+			margin-bottom:20px
+		}
+	}
+	.right{
+		width:30%;
+	}
+	.right{
+		h2{
+			border-bottom:1px solid $grey-color;
+			color:$white;
+			padding-bottom:30px
+		}
+		article{
+			overflow:$overflow;
+			margin:15px 0
+		}
+		article img{	
+			float: left;
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 40px;
+		    background: red;
+		    border: 0;
+		    margin-right:15px;
+		    box-shadow:0 0 5px 0px;
+		}
+		article h4{
+			color:$heading-color;
+		}
+		article p{
+			color:#fff
+		}
+	}
+	.left, .right{
+		float:left
+	}
+}
+footer{
+	margin-top:30px;
+}
+footer{
+	span{
+		color:$grey-color;
+		font-family:sanfranc;
+	}
+	a{
+		text-decoration:none;
+		color:#65AEF8;
+		display:inline-block;
+		margin:0 10px;
+		font-family:sanfranc;
+	}
+}
+
+@media screen and (max-width:$min-xs-width){
+	nav{
+		.collapse{
+			display:block;
+			margin-left:15px
+		}
+		ul{
+			width:100%;
+			display:none;
+		}
+		li{
+			float:none;
+		}
+	}
+	section{
+		.left,.right{
+			width:100%;
+		}
+		.wrap{
+			width:90%;
+			margin:0 15px
+		}
+		.right{
+			background:#151517;
+		}
+		.left{
+			.block{
+				width:100%
+			}
+			.im{
+				width:92%;
+			}
+		} 
+
+	}
+	footer{
+		span,a{
+			display:block;
+			text-align:center
+		}
+		.wrap{
+			width:90%;
+			margin:0 15px
+		}
+
+	}
+	
+}
